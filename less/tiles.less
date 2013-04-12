@@ -1,0 +1,64 @@
+/*
+ * BASE STYLING
+ */
+
+.tile-row {
+    *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.tile-row .tile {
+    position: relative;
+
+    display: block;
+    float: left;
+    height: 0px;
+}
+
+.tile-row .tile .tile-content {
+    position: absolute;
+
+    display:block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+ * MIXIN - Used for generating the tiles
+ */
+
+ #tiles { 
+    .tile(@nbrOfTiles,@percentmargin) {
+
+        //Calculate the size of the tile
+        @dimension: 5%;
+
+        .tile {
+            width: @dimension;
+            margin: 0 0 @percentMargin @percentMargin;
+            padding-bottom: @dimension;
+        }
+
+        //A wide tile is double the width of a normal tile
+        .tile.wide, .tile-double {
+            width: (@dimension * 2 + @percentMargin);
+        }
+        
+        //A double tile is both double the width
+        //and double the height of a normal tile
+        .tile.double {
+            padding-bottom: (@dimension * 2 + @percentMargin);
+        }
+    }
+}
