@@ -21,14 +21,19 @@
     position: relative;
 
     display: block;
+    box-sizing: border-box;
+    overflow: hidden;
     float: left;
     height: 0px;
 }
 
 .tile-row .tile .tile-content {
     position: absolute;
+    top: 0px;
+    left: 0px;
 
     display:block;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
 }
@@ -49,7 +54,7 @@
     .core(){
         .rowX(@index) when (@index > 0) {
             .tile-row.tiles@{index} { 
-                .tile-row(@index, 2%); 
+                .tile-row(@index, 12px); 
             }
             .rowX(@index - 1);
         }
@@ -57,7 +62,7 @@
 
         .rowXTablet(@index) when (@index > 0) {
             .tile-row.tiles@{index}-tablet { 
-                .tile-row(@index, 2%); 
+                .tile-row(@index, 8px); 
             }
             .rowXTablet(@index - 1);
         }
@@ -65,7 +70,7 @@
 
         .rowXPhone(@index) when (@index > 0) {
             .tile-row.tiles@{index}-phone { 
-                .tile-row(@index, 2%); 
+                .tile-row(@index, 8px); 
             }
             .rowXPhone(@index - 1);
         }
@@ -75,20 +80,27 @@
 
             margin-left: -@percentMargin;
             .tile {
-                width: 100 / @nbrOfTiles - @percentMargin;
-                margin: 0 0 @percentMargin @percentMargin;
-                padding-bottom: 100 / @nbrOfTiles - @percentMargin;
+                width: 100% / @nbrOfTiles;
+                border-left: @percentMargin solid transparent;
+                padding-bottom: 100% / @nbrOfTiles;
             }
 
             //A wide tile is double the width of a normal tile
             .tile.wide, .tile.double {
-                width: ((100 / @nbrOfTiles - @percentMargin) * 2 + @percentMargin);
+                width: ((100% / @nbrOfTiles) * 2);
+                padding-right: @percentMargin;
             }
             
             //A double tile is both double the width
             //and double the height of a normal tile
             .tile.double {
-                padding-bottom: ((100 / @nbrOfTiles - @percentMargin) * 2 + @percentMargin);
+                padding-bottom: ((100% / @nbrOfTiles) * 2 - 0.2);
+            }
+
+            //feels like a hack but it creates perfect tiles
+            .tile .tile-content {
+                margin-top: -@percentMargin;
+                padding-top: @percentMargin;
             }
         }
         .rowX(@nmrOfTiles);
