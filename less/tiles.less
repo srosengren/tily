@@ -41,7 +41,7 @@
 #tiles > .core();
 
 /*
- * VARIABLES - Used for generating tiles rows
+ * VARIABLES - Used for generating tile rows
  */
 
  @nmrOfTiles: 12;
@@ -76,31 +76,31 @@
         }
         .rowXPhone(0){}
 
-        .tile-row(@nbrOfTiles,@percentMargin) {
+        .tile-row(@nbrOfTiles,@tileMargin) {
 
-            margin-left: -@percentMargin;
+            margin-left: -@tileMargin;
             .tile {
                 width: 100% / @nbrOfTiles;
-                border-left: @percentMargin solid transparent;
+                border-left: @tileMargin solid transparent;
                 padding-bottom: 100% / @nbrOfTiles;
             }
 
             //A wide tile is double the width of a normal tile
             .tile.wide, .tile.double {
                 width: ((100% / @nbrOfTiles) * 2);
-                padding-right: @percentMargin;
+                padding-right: @tileMargin;
             }
             
             //A double tile is both double the width
             //and double the height of a normal tile
             .tile.double {
-                padding-bottom: ((100% / @nbrOfTiles) * 2 - 0.2);
+                padding-bottom: ((100% / @nbrOfTiles) * 2);
             }
 
             //feels like a hack but it creates perfect tiles
             .tile .tile-content {
-                margin-top: -@percentMargin;
-                padding-top: @percentMargin;
+                margin-top: -@tileMargin;
+                padding-top: @tileMargin;
             }
         }
         .rowX(@nmrOfTiles);
