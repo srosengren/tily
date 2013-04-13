@@ -33,16 +33,30 @@
     height: 100%;
 }
 
+/*
+ * VARIABLES - Used for generating tiles rows
+ */
+
+ @nmrOfTiles: 12;
 
 /*
  * MIXIN - Used for generating the tiles
  */
 
  #tiles { 
-    .tile(@nbrOfTiles,@percentmargin) {
+
+    .rowX(@index) when (@index > 0) {
+        .tile-row@{index} { 
+            .tile-row(@index, 4%); 
+        }
+        .rowX(@index - 1);
+    }
+    .rowX(0){}
+
+    .tile-row(@nbrOfTiles,@percentMargin) {
 
         //Calculate the size of the tile
-        @dimension: 5%;
+        @dimension: (100 / @nmrOfTiles) - @percentMargin;
 
         .tile {
             width: @dimension;
@@ -61,4 +75,5 @@
             padding-bottom: (@dimension * 2 + @percentMargin);
         }
     }
+    .rowX(@nmrOfTiles);
 }
