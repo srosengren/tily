@@ -79,26 +79,26 @@
         .tile-row(@nbrOfTiles,@tileMargin) {
 
             margin-left: -@tileMargin;
-            .tile {
+            > .tile {
                 width: 100% / @nbrOfTiles;
                 border-left: @tileMargin solid transparent;
                 padding-bottom: 100% / @nbrOfTiles;
             }
 
             //A wide tile is double the width of a normal tile
-            .tile.wide, .tile.double {
+            > .tile.wide, > .tile.double {
                 width: ((100% / @nbrOfTiles) * 2);
                 padding-right: @tileMargin;
             }
             
             //A double tile is both double the width
             //and double the height of a normal tile
-            .tile.double {
+            > .tile.double {
                 padding-bottom: ((100% / @nbrOfTiles) * 2);
             }
 
             //feels like a hack but it creates perfect tiles
-            .tile .tile-content {
+            > .tile > .tile-content {
                 margin-top: -@tileMargin;
                 padding-top: @tileMargin;
             }
