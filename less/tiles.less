@@ -33,6 +33,8 @@
     height: 100%;
 }
 
+#tiles > .core();
+
 /*
  * VARIABLES - Used for generating tiles rows
  */
@@ -44,36 +46,60 @@
  */
 
  #tiles { 
-
-    .rowX(@index) when (@index > 0) {
-        .tile-row@{index} { 
-            .tile-row(@index, 4%); 
+    .core(){
+        .rowX(@index) when (@index > 0) {
+            .tile-row.tiles@{index} { 
+                .tile-row(@index, 2%); 
+            }
+            .rowX(@index - 1);
         }
-        .rowX(@index - 1);
+        .rowX(0){}
+
+        .rowXTablet(@index) when (@index > 0) {
+            .tile-row.tiles@{index}-tablet { 
+                .tile-row(@index, 2%); 
+            }
+            .rowXTablet(@index - 1);
+        }
+        .rowXTablet(0){}
+
+        .rowXPhone(@index) when (@index > 0) {
+            .tile-row.tiles@{index}-phone { 
+                .tile-row(@index, 2%); 
+            }
+            .rowXPhone(@index - 1);
+        }
+        .rowXPhone(0){}
+
+        .tile-row(@nbrOfTiles,@percentMargin) {
+
+            margin-left: -@percentMargin;
+            .tile {
+                width: 100 / @nbrOfTiles - @percentMargin;
+                margin: 0 0 @percentMargin @percentMargin;
+                padding-bottom: 100 / @nbrOfTiles - @percentMargin;
+            }
+
+            //A wide tile is double the width of a normal tile
+            .tile.wide, .tile.double {
+                width: ((100 / @nbrOfTiles - @percentMargin) * 2 + @percentMargin);
+            }
+            
+            //A double tile is both double the width
+            //and double the height of a normal tile
+            .tile.double {
+                padding-bottom: ((100 / @nbrOfTiles - @percentMargin) * 2 + @percentMargin);
+            }
+        }
+        .rowX(@nmrOfTiles);
+
+        //Generate specialized rows
+        @media (max-width: 767px) { 
+            .rowXTablet(@nmrOfTiles);
+        }
+
+        @media (max-width: 480px) {
+            .rowXPhone(@nmrOfTiles);
+        }
     }
-    .rowX(0){}
-
-    .tile-row(@nbrOfTiles,@percentMargin) {
-
-        //Calculate the size of the tile
-        @dimension: (100 / @nmrOfTiles) - @percentMargin;
-
-        .tile {
-            width: @dimension;
-            margin: 0 0 @percentMargin @percentMargin;
-            padding-bottom: @dimension;
-        }
-
-        //A wide tile is double the width of a normal tile
-        .tile.wide, .tile-double {
-            width: (@dimension * 2 + @percentMargin);
-        }
-        
-        //A double tile is both double the width
-        //and double the height of a normal tile
-        .tile.double {
-            padding-bottom: (@dimension * 2 + @percentMargin);
-        }
-    }
-    .rowX(@nmrOfTiles);
 }
