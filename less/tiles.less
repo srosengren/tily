@@ -82,7 +82,7 @@
     .transforming(@modifier){
         .rowXTransform(@index,@modifier) when (@index > 0) {
             .tile-row.tiles@{index}@{modifier} { 
-                #tiles > .tile-amount-dependant-row(@index, @tile-margin-phone); 
+                #tiles > .tile-amount-dependant-row-transform(@index, @tile-margin-phone,@modifier); 
             }
             .rowXTransform(@index - 1,@modifier);
         }
@@ -132,6 +132,24 @@
         //A double tile is both double the width
         //and double the height of a normal tile
         > .tile.double {
+            padding-bottom: ((100% / @nmbrOfTiles) * 2);
+        }           
+    }
+
+    //Generating the specific tile settings for transforming tiles, called from core and transforming
+    .tile-amount-dependant-row-transform(@nmbrOfTiles,@tileMargin,@modifier) {
+        > .tile, > .tile@{modifier} {
+            width: 100% / @nmbrOfTiles;
+            padding-bottom: 100% / @nmbrOfTiles;
+        }
+
+        > .tile.wide, > .tile.double, > .tile.wide@{modifier}, > .tile.double@{modifier} {
+            width: ((100% / @nmbrOfTiles) * 2);
+        }     
+
+        //A double tile is both double the width
+        //and double the height of a normal tile
+        > .tile.double, > .tile.double@{modifier} {
             padding-bottom: ((100% / @nmbrOfTiles) * 2);
         }           
     }
