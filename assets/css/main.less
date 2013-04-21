@@ -1,0 +1,100 @@
+@color-accent: #1BA1E2;
+@grid-spacing: 16px;
+@content-spacing: 16px;
+
+body {
+	font-family: "Segoe UI",Verdana,Helvetica,Sans-Serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+	font-weight: normal;
+	margin: 0 0 @content-spacing 0;
+}
+h1 {
+	font-size: 4em;
+	line-height: 1em;
+	margin: 0.2em 0;
+	color: @color-accent;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+small {
+	font-size: 0.4em;
+	color: #ccc;
+	margin-left: 8px;
+}
+
+em {
+	color: @color-accent;
+}
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.row {
+	margin-left: -@grid-spacing;
+	margin-top: @content-spacing;
+}
+
+.row .third {
+	box-sizing: border-box;
+	width: 100% / 3;
+	padding-left: @grid-spacing;
+	float:left;
+	display:block;
+}
+
+.tile .tile-content {
+	background-color: @color-accent;
+	color:white;
+}
+
+.tile a.tile-content:hover {
+	background-color: darken(@color-accent,10);
+}
+
+.tile .tile-title {
+	font-size: 1.4em;
+	position: absolute;
+	left: 6px;
+	bottom: 12px;
+}
+
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+	.container {
+		width: 1170px;
+	}
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {  
+	.container {
+		width: 724px;
+	}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {  
+	.container {
+		width: auto;
+		margin: 0 10px;
+	}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {  
+	.row .third {
+		width: 100%;
+	}
+}
