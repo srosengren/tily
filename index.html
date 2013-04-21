@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Tily - A flexible tile framework</title>
-	<link type="text/css" rel="stylesheet" href="./assets/css/fontawesome.css">
+	<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="./assets/css/main.css">
 	<link type="text/css" rel="stylesheet" href="./assets/css/tiles.css">
 </head>
@@ -25,17 +25,19 @@
 					<div class="tile">
 						<div class="tile-row tiles2">
 							<div class="tile">
-								<a href="https://twitter.com/srrosengren" target="_blank" class="tile-content">
-									<i class="icon-twitter"></i>
+								<a href="https://twitter.com/srrosengren" target="_blank" class="tile-content" title="follow srrosengren on twitter">
+									<i class="icon-twitter tile-icon"></i>
 								</a>
 							</div>
 							<div class="tile">
-								<a href="https://github.com/srosengren/tily" target="_blank" class="tile-content">
-									<i class="icon-github"></i>
+								<a href="https://github.com/srosengren/tily" target="_blank" class="tile-content" title="fork srosengren on github">
+									<i class="icon-github tile-icon"></i>
 								</a>
 							</div>
 							<div class="tile">
-								<div class="tile-content"></div>
+								<div class="tile-content">
+									<i class="icon-download-alt tile-icon"></i>
+								</div>
 							</div>
 							<div class="tile">
 								<div class="tile-content"></div>
@@ -57,17 +59,20 @@
 		</div>
 		<div class="row">
 			<div class="third">
-				<h2>How?</h2>
-				<p></p>
+				<h2>Why?<i class="icon-time"></i></h2>
+				<p>Defining tiles for a simple use case isn't hard, but when you add requirements of a fluid site layout and device specific 
+					layouts, the complexity adds up. Tily solves these issues for you, all you have to do is drop your tiles in wherever you need them.</p>
 			</div>
 			<div class="third">
-				<h2>Devices?</h2>
+				<h2>Devices?<i class="icon-laptop"></i>
+				<i class="icon-tablet"></i>
+				<i class="icon-mobile-phone"></i></h2>
 				<p>Tily is a fully fluid system meaning that the tiles will fit wherever you put them. But the default configuration 
 					ships with transforming rows and tiles. Meaning that you can define device specific row configurations and tiles 
 					that show as normal, wide or double depending on device</p>
 			</div>
 			<div class="third">
-				<h2>Browser support?</h2>
+				<h2>Browser support?<i class="icon-desktop"></i></h2>
 				<p>Tily is built to support modern and semi-modern browsers that support the <em>box-sizing: border-box;</em> CSS attribute.
 					 This means that IE8 and up is supported along with most other browsers.</p>
 			</div>
