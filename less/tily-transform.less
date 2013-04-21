@@ -1,0 +1,14 @@
+ @tile-margin-tablet: 10px;
+ @tile-margin-phone: 8px;
+
+ @tile-amount-tablet: 12;
+ @tile-amount-phone: 12;
+
+//Generate specialized rows
+@media (max-width: 767px) { 
+    #tiles > .transforming(@tile-amount-tablet, @tile-margin-tablet, -tablet);
+}
+
+@media (max-width: 480px) {
+    #tiles > .transforming(@tile-amount-phone, @tile-margin-phone, -phone);
+}

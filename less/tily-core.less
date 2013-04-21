@@ -1,0 +1,46 @@
+/*
+ * BASE STYLING
+ */
+
+.tile-row {
+    *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.tile-row .tile {
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+    height: 0px;
+}
+
+.tile-row .tile .tile-content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    display:block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+ @tile-margin: 12px;
+
+ @tile-amount: 12;
+
+ //Generate the core system
+#tiles > .core(@tile-amount, @tile-margin);

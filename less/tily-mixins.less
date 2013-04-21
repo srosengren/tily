@@ -1,85 +1,24 @@
 /*
- * BASE STYLING
- */
-
-.tile-row {
-    *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-    // Fixes Opera/contenteditable bug:
-    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
-    line-height: 0;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-.tile-row .tile {
-    position: relative;
-
-    display: block;
-    box-sizing: border-box;
-    overflow: hidden;
-    float: left;
-    height: 0px;
-}
-
-.tile-row .tile .tile-content {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-
-    display:block;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-}
-
-//Generate the core system
-#tiles > .core();
-
-//Generate specialized rows
-@media (max-width: 767px) { 
-    #tiles > .transforming(-tablet);
-}
-
-@media (max-width: 480px) {
-    #tiles > .transforming(-phone);
-}
-
-/*
- * VARIABLES - Used for generating tile rows
- */
-
- @nmbrOfTiles: 12;
- @tile-margin-desktop: 12px;
- @tile-margin-tablet: 10px;
- @tile-margin-phone: 8px;
-
-/*
  * MIXIN - Used for generating the tiles
  */
 
  #tiles { 
     //Base system
-    .core(){
+    .core(@nmbrOfTiles, @tileMargin){
         .rowX(@index) when (@index > 0) {
             .tile-row.tiles@{index} { 
-                #tiles > .tile-amount-dependant-row(@index, @tile-margin-desktop); 
+                #tiles > .tile-amount-dependant-row(@index, @tileMargin); 
             }
             .rowX(@index - 1);
         }
         .rowX(0){}
 
-        #tiles > .tile-row-base(@tile-margin-desktop);
+        #tiles > .tile-row-base(@tileMargin);
         .rowX(@nmbrOfTiles);
     }
 
     //Transforming system
-    .transforming(@modifier){
+    .transforming(@nmbrOfTiles, @tileMargin, @modifier){
         .rowXTransform(@index,@modifier) when (@index > 0) {
             .tile-row.tiles@{index}@{modifier} { 
                 #tiles > .tile-amount-dependant-row-transform(@index, @tile-margin-phone,@modifier); 
@@ -88,7 +27,7 @@
         }
         .rowXTransform(0,''){}
 
-        #tiles > .tile-row-base(@tile-margin-tablet);
+        #tiles > .tile-row-base(@tileMargin);
         .rowXTransform(@nmbrOfTiles,@modifier);
     }
 
