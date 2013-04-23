@@ -2,7 +2,7 @@
  * BASE STYLING
  */
 
-.tile-row {
+.tile-row, .tile.collapse {
     *zoom: 1;
   &:before,
   &:after {
@@ -36,6 +36,12 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+}
+
+.tile-row > .tile.collapse {
+    padding-bottom: 0 !IMPORTANT;
+    overflow: visible;
+    height: auto;
 }
 
  @tile-margin: 12px;
