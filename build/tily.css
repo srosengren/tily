@@ -1,20 +1,24 @@
-//V1.0.0
+//V1.0.1
 /*
  * MIXIN - Used for generating the tiles
  */
 /*
  * BASE STYLING
  */
-.tile-row {
+.tile-row,
+.tile.collapse {
   *zoom: 1;
 }
 .tile-row:before,
-.tile-row:after {
+.tile.collapse:before,
+.tile-row:after,
+.tile.collapse:after {
   display: table;
   content: "";
   line-height: 0;
 }
-.tile-row:after {
+.tile-row:after,
+.tile.collapse:after {
   clear: both;
 }
 .tile-row .tile {
@@ -33,6 +37,11 @@
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+}
+.tile-row > .tile.collapse {
+  padding-bottom: 0 !IMPORTANT;
+  overflow: visible;
+  height: auto;
 }
 .tile-row {
   margin-left: -12px;
