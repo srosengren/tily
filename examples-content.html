@@ -3,6 +3,7 @@
 <head>
 	<title>Tily - A flexible tile framework</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 	<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="./assets/css/tily.css">
 	<link type="text/css" rel="stylesheet" href="./assets/css/content.css">
@@ -10,7 +11,7 @@
 <body>
 	<div class="container">
 		<h1><a href="index.html">Tily<small>my generic news site</small></a></h1>
-		<div class="tile-row tiles4 news">
+		<div class="tile-row tiles4 tiles2-tablet news">
 			<div class="tile wide">
 				<div class="tile-content" style="background-image: url('./assets/images/news/catwalk-stylepa.jpg');">
 					<div class="news-meta">
@@ -22,7 +23,12 @@
 			<div class="tile">
 				<div class="tile-row tiles2">
 					<div class="tile wide">
-						<div class="tile-content"></div>
+						<div class="tile-content">
+							<div class="news-weather">
+								<i class="icon-cloud icon-weather"></i>
+								<span class="news-weather-info">NY City 14.2&deg;</span>
+							</div>
+						</div>
 					</div>
 					<div class="tile wide social">
 						<div class="tile-row tiles4">
@@ -54,50 +60,92 @@
 					</div>
 				</div>
 			</div>
-			<div class="tile">
-				<div class="tile-content"></div>
+			<div class="tile quote">
+				<div class="tile-content">
+					<span class="quote-text">"Intellectual property has the shelf life of a banana."</span>
+					<span class="quote-author">Bill Gates</span>
+				</div>
 			</div>
 		</div>
-		<div class="tile-row tiles8 news">
-			<div class="tile double">
-				<div class="tile-content" style="background-image: url('./assets/images/news/iraqi-warprotest-kdt.jpg');">
-					<div class="news-meta">
-						<a class="attribution" target="_BLANK" href="http://www.flickr.com/photos/romulusnr/427608039/">attribution</a>
-						<span class="tile-title">Iraqi war protest.</span>
+		<div class="tile-row tiles4 tiles2-tablet news">
+			<div class="tile wide">
+				<div class="tile-row tiles4">
+					<div class="tile double">
+						<div class="tile-content" style="background-image: url('./assets/images/news/iraqi-warprotest-kdt.jpg');">
+							<div class="news-meta">
+								<a class="attribution" target="_BLANK" href="http://www.flickr.com/photos/romulusnr/427608039/">attribution</a>
+								<span class="tile-title">Iraqi war protest.</span>
+							</div>
+						</div>
+					</div>
+					<div class="tile wide">
+						<div class="tile-content"></div>
+					</div>
+					<div class="tile">
+						<div class="tile-content">
+							<div class="news-text">
+								Fit for the summer? 5 new super diets to try.
+							</div>
+						</div>
+					</div>
+					<div class="tile">
+						<div class="tile-content" style="background-image: url('./assets/images/news/porsche-thohau.jpg');">
+							<div class="news-meta">
+								<a href="http://www.flickr.com/photos/thorstenhaustein/6192716727/" class="attribution" target="_BLANK">attribution</a>
+								<span class="tile-title">Auto</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="tile wide">
-				<div class="tile-content"></div>
-			</div>
-			<div class="tile">
-				<div class="tile-content" style="background-image: url('./assets/images/news/wall-street-epicharmus.jpg');">
-					<div class="news-meta">
-						<a href="http://www.flickr.com/photos/epicharmus/1481122250/" class="attribution" target="_BLANK">attribution</a>
-						<span class="tile-title">Tax hike</span>
+				<div class="tile-row tiles4">
+					<div class="tile">
+						<div class="tile-content" style="background-image: url('./assets/images/news/wall-street-epicharmus.jpg');">
+							<div class="news-meta">
+								<a href="http://www.flickr.com/photos/epicharmus/1481122250/" class="attribution" target="_BLANK">attribution</a>
+								<span class="tile-title">Tax hike</span>
+							</div>
+						</div>
+					</div>
+					<div class="tile">
+						<div class="tile-content">
+							<div class="news-text">
+								These foods will kill you!
+							</div>
+						</div>
+					</div>
+					<div class="tile wide">
+						<div class="tile-content" style="background-image: url('./assets/images/news/dance-dixielaw.jpg');">
+							<div class="news-meta">
+								<a href="http://www.flickr.com/photos/dixielaw/4294779754/" class="attribution" target="_BLANK">attribution</a>
+								<span class="tile-title">Free your mind</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="tile wide quote">
+						<div class="tile-content">
+							<span class="quote-text">
+								Someone found a cure for something!
+							</span>
+							<div class="news-meta">
+								<span class="tile-title">Medicine</span>
+							</div>
+						</div>
+					</div>
+					<div class="tile">
+						<div class="tile-content" style="background-image: url('./assets/images/news/sportsball-rachelc.jpg');">
+							<div class="news-meta">
+								<a href="http://www.flickr.com/photos/rachelc/7744873984/" class="attribution" target="_BLANK">attribution</a>
+								<span class="tile-title">Sportsball</span>
+							</div>
+						</div>
+					</div>
+					<div class="tile">
+						<div class="tile-content"></div>
 					</div>
 				</div>
-			</div>
-			<div class="tile">
-				<div class="tile-content"></div>
-			</div>
-			<div class="tile wide">
-				<div class="tile-content"></div>
-			</div>
-			<div class="tile">
-				<div class="tile-content"></div>
-			</div>
-			<div class="tile">
-				<div class="tile-content"></div>
-			</div>
-			<div class="tile wide">
-				<div class="tile-content"></div>
-			</div>
-			<div class="tile">
-				<div class="tile-content"></div>
-			</div>
-			<div class="tile">
-				<div class="tile-content"></div>
 			</div>
 		</div>
 	</div>
