@@ -70,12 +70,28 @@ em {
 	}
 }
 
-.row .third {
+.row .third, .row .half, .howto-case, .howto-result {
 	box-sizing: border-box;
-	width: 100% / 3;
 	padding-left: @grid-spacing;
 	float:left;
 	display:block;
+	min-height: 1px;
+}
+
+.row .third {
+	width: 100% / 3;
+}
+
+.row .half {
+	width: 50%;
+}
+
+.howto-case {
+	width: 60%;
+}
+
+.howto-result {
+	width: 40%;
 }
 
 .tile .tile-content {
