@@ -1,85 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tily - A flexible tile framework</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <title>Tily - A flexible tile framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 
-	<!--[if lt IE 9]>
-		<script>
-			document.createElement('header');
-			document.createElement('nav');
-			document.createElement('section');
-			document.createElement('article');
-			document.createElement('aside');
-			document.createElement('footer');
-			document.createElement('hgroup');
-		</script>
-	<![endif]-->
+    <!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('section');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('hgroup');
+        </script>
+    <![endif]-->
 
-	<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css">
-	<link type="text/css" rel="stylesheet" href="./assets/css/tily.css">
-	<link type="text/css" rel="stylesheet" href="./assets/css/main.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/tily.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/howto.css">
+    <link type="text/css" rel="stylesheet" href="./assets/libs/prettify/prettify.css">
 </head>
 <body>
-	<div class="container">
-		<h1><a href="index.html">Tily<small>how-to?</small></a></h1>
-		<h1>Examples</h1>
-		<section id="basic" class="howto-section">
-			<h1>Basic usage</h1>
-			<div class="row">
-				<div class="howto-case">
-					<p>A simple use case for tily is to insert tiles in an arbitrary container and have them look a certain way independant of the 
-						initial or responsive size of the parent.</p>
-					<p>The example to the right shows the three sizes of tiles in the basic system without any nesting or transforming elements.</p>
-					<pre class="prettyprint">
+    <div class="container">
+        <h1><a href="index.html">Tily<small>how-to?</small></a></h1>
+        <h1>Examples</h1>
+        <section id="basic" class="howto-section">
+            <h1>Basic usage</h1>
+            <p>A simple use case for tily is to insert tiles in an arbitrary container and have them look a certain way independant of the 
+                initial or responsive size of the parent.</p>
+            <p>The example to the right shows the three sizes of tiles in the basic system without any nesting or transforming elements.</p>
+            <p>What we do is that we define a <code>.tile-row</code> with a modifier of <code>.tiles5</code>. This tells the row that it should fit five tiles horizontally. We then add a <code>.tile.double</code>, this is a tile that is double the size of a normal size in both height and width. The following <code>.tile.wide</code> is a tile that is double the width but equal the height of a normal tile. The next <code>.tile</code> will stay on the same row but the following three will float down to the next one since we have filled the width of our <code>.tile-row</code> 2 (double) + 2 (wide) + 1 = 5.</p>
+            <div class="row">
+                <div class="half">
+                    <h2>Code</h2>
+                    <pre class="prettyprint">
 &lt;div class="tile-row tiles5"&gt;
-	&lt;div class="tile double"&gt;
-		&lt;div class="tile-content"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="tile wide"&gt;
-		&lt;div class="tile-content"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="tile"&gt;
-		&lt;div class="tile-content"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="tile"&gt;
-		&lt;div class="tile-content"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="tile"&gt;
-		&lt;div class="tile-content"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="tile"&gt;
-		&lt;div class="tile-content"&gt;&lt;/div&gt;
-	&lt;/div&gt;
+    &lt;div class="tile double"&gt;
+        &lt;div class="tile-content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile wide"&gt;
+        &lt;div class="tile-content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile"&gt;
+        &lt;div class="tile-content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile"&gt;
+        &lt;div class="tile-content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile"&gt;
+        &lt;div class="tile-content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile"&gt;
+        &lt;div class="tile-content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
-					</pre>
-					<p>What we do is that we define a <code>.tile-row</code> with a modifier of <code>.tiles5</code>. This tells the row that it will fit five tiles in a row. We then add a <code>.tile.double</code>, this is a tile that is double the size of a normal size in both height and width. The following <code>.tile.wide</code> is a tile that is double the width but equal the height of a normal tile. The next <code>.tile</code> will stay on the same row but the following three will float down to the next one since we have filled the width of our <code>.tile-row</code> 2 (double) + 2 (wide) + 1 = 5.</p>
-				</div>
-				<div class="howto-result">
-					<div class="tile-row tiles5">
-						<div class="tile double">
-							<div class="tile-content"></div>
-						</div>
-						<div class="tile wide">
-							<div class="tile-content"></div>
-						</div>
-						<div class="tile">
-							<div class="tile-content"></div>
-						</div>
-						<div class="tile">
-							<div class="tile-content"></div>
-						</div>
-						<div class="tile">
-							<div class="tile-content"></div>
-						</div>
-						<div class="tile">
-							<div class="tile-content"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
+</pre>
+                </div>
+                <div class="half">
+                    <h2>Result</h2>
+                    <div class="tile-row tiles5">
+                        <div class="tile double">
+                            <div class="tile-content"></div>
+                        </div>
+                        <div class="tile wide">
+                            <div class="tile-content"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="tile-content"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="tile-content"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="tile-content"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="tile-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="./assets/libs/prettify/prettify.js"></script>
+    <script>
+        window.prettyPrint && prettyPrint();
+    </script
 </body>
 </html>

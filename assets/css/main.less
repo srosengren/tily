@@ -53,6 +53,13 @@ em {
 	margin: 0 auto;
 }
 
+code {
+	background: #efefef;
+	color: @color-accent;
+	font-size: 0.85em;
+	padding: 0.15em;
+}
+
 .row {
 	margin-left: -@grid-spacing;
 	margin-top: @content-spacing;
@@ -70,7 +77,7 @@ em {
 	}
 }
 
-.row .third, .row .half, .howto-case, .howto-result {
+.row .third, .row .half, .row .fill {
 	box-sizing: border-box;
 	padding-left: @grid-spacing;
 	float:left;
@@ -86,12 +93,8 @@ em {
 	width: 50%;
 }
 
-.howto-case {
-	width: 60%;
-}
-
-.howto-result {
-	width: 40%;
+.row .fill {
+	width: 100%;
 }
 
 .tile .tile-content {
