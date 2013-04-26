@@ -77,7 +77,7 @@ code {
 	}
 }
 
-.row .third, .row .half, .row .fill {
+.row > .third, .row > .half, .row > .fill, .row  > .menu, .row > .content {
 	box-sizing: border-box;
 	padding-left: @grid-spacing;
 	float:left;
@@ -85,16 +85,24 @@ code {
 	min-height: 1px;
 }
 
-.row .third {
+.row > .third {
 	width: 100% / 3;
 }
 
-.row .half {
+.row > .half {
 	width: 50%;
 }
 
-.row .fill {
+.row > .fill {
 	width: 100%;
+}
+
+.row > .menu {
+	width: 20%;
+}
+
+.row > .content {
+	width: 80%;
 }
 
 .tile .tile-content {
