@@ -83,7 +83,20 @@
                 <section id="utilities" class="howto-section">
                     <h1>Utilities</h1>
                     <h2>Collapse</h2>
-
+                    <p>The <code>.collapse</code> is a utility class that is very seldom needed. The use case for it is when nesting and transforming <code>.tile-row</code> elements inside of a <code>.tile</code>, sometimes the nested row content doesn't add up to the height (either higher or shorter) of the containing tile. What the collapse does is that it allows the height of the containing tile to "collapse to content". The</p>
+<pre class="prettyprint">
+&lt;div class="tile-row tiles2"&gt;
+    &lt;div class="tile double collapse"&gt;
+        &lt;div class="tile-row tiles2"&gt;
+            &lt;div class="tile"&gt;
+            &lt;/div&gt;
+            &lt;div class="tile"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                <p>This example create a double tile that fills its container, we then add a tile row that can display two horizontal and two vertical tiles, we only add two tiles meaning that there will be a gap, one tile in height below the two inner most tiles. The <code>.collapse</code> simply removes this gap, making the double tile in this example appear as a wide tile.</p>
                 </section>
 
                 <h1>Examples</h1>
