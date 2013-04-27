@@ -36,10 +36,11 @@
 &lt;div class="tile-row tiles*"&gt;
     &lt;div class="tile"&gt;
     &lt;/div&gt;
+    ...
 &lt;/div&gt;
 </pre>
+                <p>The <code>.tile-row</code> must always have a <code>.tiles*</code> modifier class, this class decides how many tiles will fit horizontally in the row before they start to flow below.</p>
                 </section>
-                    <p>The <code>.tile-row</code> must always have a <code>.tiles*</code> modifier class, this class decides how many tiles will fit horizontally in the row before they start to flow below.</p>
                 <section id="tile" class="howto-section">
                     <h1>Tile</h1>
 <pre class="prettyprint">
@@ -50,6 +51,39 @@
 </pre>
                     <p>The tile is the element with perfect proportions that you want. A tile will by default take up 1/* of your <code>.tile-row.tiles*</code>s width and have a height that is equal to its width. The content that you want to display goes inside the <code>.tile-content</code> element.</p>
                     <p>A <code>.tile</code> has two modifier classes, the <code>.double</code> and the <code>.wide</code> classes. These changes the size and or proportions of the tile in question. Adding <code>.double</code> to a tile will double its height and its width. Adding the <code>.wide</code> class will instead double the width but leave the height as it is.</p>
+                </section>
+                <section id="nesting" class="howto-section">
+                    <h1>Nesting</h1>
+                    <p>Tily allows for infinite nesting because of its fluid nature, this allows you to create any combination of tiles that you need. Simply replace the <code>.tile-content</code> with a <code>.tile-row.tiles*</code> in the tile that you want to create a new row in.</p>
+<pre class="prettyprint">
+&lt;div class="tile-row tiles*"&gt;
+    &lt;div class="tile"&gt;
+        &lt;div class="tile-row tiles*"&gt;
+            &lt;div class="tile"&gt;
+            &lt;/div&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+&lt;/div&gt;
+</pre>
+                </section>
+                <section id="transform" class="howto-section">
+                    <h1>Transform - Responsive</h1>
+                    <p>Tily ships with a few responsive features for tile-rows and tiles. These allows you to create elements that behaves differently based on the users current viewport.</p>
+<pre class="prettyprint">
+&lt;div class="tile-row tiles* tiles*-phone tiles*-tablet"&gt;
+    &lt;div class="tile wide-phone double-tablet"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                    <p>The <code>.tile-row</code> has the ability to fit a different amount of horizontal tiles based on the viewport by using the <code>.tiles*-(tablet||phone)</code> class. Tiles that no longer fit horizontally will simply be pushed down below but will still show.</p>
+                    <p>The <code>.tile</code> have a similar transform class <code>.(tile||double||wide)-(phone||tablet)</code>. This causes the tile to display as the chosen modifier class (tile/double/wide) on the chosen viewport (phone/tablet)</p>
+                </section>
+                <section id="utilities" class="howto-section">
+                    <h1>Utilities</h1>
+                    <h2>Collapse</h2>
+
                 </section>
 
                 <h1>Examples</h1>
