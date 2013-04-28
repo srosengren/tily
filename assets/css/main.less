@@ -119,15 +119,21 @@ code {
 }
 
 .tile .tile-icon {
-	width: 30px;
-	margin: 0 auto;
+	width: 1em;
 	display: block;
 	top: 50%;
-	position: relative;
-	margin-top: -12px;
+	left: 50%;
+	margin-top: -0.25em;
+	margin-left: -0.5em;
 	text-decoration: none;
-	text-align: center;
 	font-size: 25px;
+	float: left;
+	position: absolute;
+}
+
+.tile .tile-title .tile-icon {
+	position: static;
+	margin-right: 0.5em;
 }
 
 .tile .tile-title {
@@ -152,6 +158,10 @@ code {
 .hero-tagline {
 	margin-left: 16px;
 	width: 40%;
+}
+
+#newslink {
+	background: center top no-repeat url('../images/news-514x230.png');
 }
 
 
@@ -211,5 +221,11 @@ code {
 		margin-top: 3%;
 		line-height: 1.3em;
 		width: 70%;
+	}
+}
+
+@media (max-width: 340px){
+	#newslink {
+		background-image: url('../images/news-350x157.png');
 	}
 }
