@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-		    var msViewportStyle = document.createElement("style");
-		    msViewportStyle.appendChild(
-		        document.createTextNode(
-		            "@-ms-viewport{width:auto!important}"
-		        )
-		    );
-		    document.getElementsByTagName("head")[0].
-		        appendChild(msViewportStyle);
-		}
-	</script>
 	<title>Tily - A flexible tile framework</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 	<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css">
-	<link type="text/css" rel="stylesheet" href="./assets/css/main.css">
 	<link type="text/css" rel="stylesheet" href="./assets/css/tily.css">
+	<link type="text/css" rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
 	<div class="container">
@@ -35,19 +23,25 @@
 				<div class="tile-row tiles2 tiles4-tablet tiles2-phone">
 					<div class="tile wide">
 						<a class="tile-content" href="examples-content.html" id="newslink">
-							<span class="tile-title">fake news site example</span>
+							<div class="tile-title">
+								<div class="tile-title-backdrop"></div>
+								<span>fake news site example</span>
+							</div>
 						</a>
 					</div>
 					<div class="tile">
 						<a class="tile-content" href="how-to.html">
-							<span class="tile-title">how-to</span>
+							<div class="tile-title">
+								<div class="tile-title-backdrop"></div>
+								<span>how-to</span>
+							</div>
 						</a>
 					</div>
 					<div class="tile">
 						<div class="tile-row tiles2">
 							<div class="tile wide">
 								<a href="https://github.com/srosengren/tily" target="_blank" class="tile-content" title="fork srosengren on github">
-									<span class="tile-title"><i class="icon-github tile-icon"></i>fork Tily</span>
+									<span class="tile-title shout"><i class="icon-github tile-icon"></i>fork Tily</span>
 								</a>
 							</div>
 							<div class="tile">
