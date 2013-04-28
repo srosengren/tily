@@ -7,13 +7,19 @@
 	<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="./assets/css/tily.css">
 	<link type="text/css" rel="stylesheet" href="./assets/css/content.css">
+
+	//twitter card
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Tily: A flexible tile system">
+	<meta name="twitter:description" content="Tily is a CSS based tile system that provides the ability to painlessly incorporate modern style tiles to your site.">
+	<meta name="twitter:image" content="http://srosengren.github.io/tily/assets/images/twitter-card.png">
 </head>
 <body>
 	<div class="container">
 		<h1><a href="index.html">Tily<small>my generic news site</small></a></h1>
 		<div class="tile-row tiles4 tiles2-tablet tiles2-phone news">
 			<div class="tile wide">
-				<div class="tile-content" style="background-image: url('./assets/images/news/catwalk-wide-stylepa.jpg');">
+				<div class="tile-content" id="fashion" style="background-image: url('./assets/images/news/catwalk-wide-stylepa.jpg');">
 					<div class="news-meta">
 						<a class="attribution" target="_BLANK" href="http://www.flickr.com/photos/thestylepa/6157915091/">by: Stylepa</a>
 						<span class="tile-title">Fashion show.</span>
@@ -71,7 +77,7 @@
 			<div class="tile wide collapse">
 				<div class="tile-row tiles4 tiles2-phone">
 					<div class="tile double">
-						<div class="tile-content" style="background-image: url('./assets/images/news/iraqi-warprotest-kdt.jpg');">
+						<div class="tile-content" id="protest" style="background-image: url('./assets/images/news/iraqi-warprotest-kdt.jpg');">
 							<div class="news-meta">
 								<a class="attribution" target="_BLANK" href="http://www.flickr.com/photos/romulusnr/427608039/">by: kdt</a>
 								<span class="tile-title">Iraqi war protest.</span>
@@ -91,7 +97,7 @@
 						</div>
 					</div>
 					<div class="tile">
-						<div class="tile-content" style="background-image: url('./assets/images/news/porsche-thohau.jpg');">
+						<div class="tile-content" id="car" style="background-image: url('./assets/images/news/porsche-thohau.jpg');">
 							<div class="news-meta">
 								<a href="http://www.flickr.com/photos/thorstenhaustein/6192716727/" class="attribution" target="_BLANK">by: thohau</a>
 								<span class="tile-title">Auto</span>
@@ -103,7 +109,7 @@
 			<div class="tile wide collapse">
 				<div class="tile-row tiles4 tiles2-phone">
 					<div class="tile">
-						<div class="tile-content" style="background-image: url('./assets/images/news/wall-street-wide-epicharmus.jpg');">
+						<div class="tile-content" id="wallstreet" style="background-image: url('./assets/images/news/wall-street-wide-epicharmus.jpg');">
 							<div class="news-meta">
 								<a href="http://www.flickr.com/photos/epicharmus/1481122250/" class="attribution" target="_BLANK">by: epicharmus</a>
 								<span class="tile-title">Tax hike</span>
@@ -118,7 +124,7 @@
 						</div>
 					</div>
 					<div class="tile wide">
-						<div class="tile-content" style="background-image: url('./assets/images/news/dance-dixielaw.jpg');">
+						<div class="tile-content" id="dance" style="background-image: url('./assets/images/news/dance-dixielaw.jpg');">
 							<div class="news-meta">
 								<a href="http://www.flickr.com/photos/dixielaw/4294779754/" class="attribution" target="_BLANK">by: dixielaw</a>
 								<span class="tile-title">Free your mind</span>
@@ -137,7 +143,7 @@
 						</div>
 					</div>
 					<div class="tile">
-						<div class="tile-content" style="background-image: url('./assets/images/news/sportsball-rachelc.jpg');">
+						<div class="tile-content" id="sportsball" style="background-image: url('./assets/images/news/sportsball-rachelc.jpg');">
 							<div class="news-meta">
 								<a href="http://www.flickr.com/photos/rachelc/7744873984/" class="attribution" target="_BLANK">by: rachelc</a>
 								<span class="tile-title">Sportsball</span>
