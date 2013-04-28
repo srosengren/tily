@@ -38,34 +38,63 @@
 </head>
 <body>
     <div class="container">
-        <h1><a href="index.html">Tily<small>how-to?</small></a></h1>
         <div class="row">
-            <div class="menu"></div>
-            <div class="content">
+            <div>
+                <h1><a href="index.html">Tily<small>how-to?</small></a></h1>
+                <p>Tily is built with simplicity in mind, but a bit of documentation is never wrong.</p>
                 <div class="row">
-                    <div class="half"></div>
-                    <div class="half">
-                        <h4>Scaffolding</h4>
-                        <div class="tile-row tiles6">
+                    <div class="third">
+                        <h2>Scaffolding</h2>
+                        <div class="tile-row tiles4 tiles6-tablet tiles4-phone">
                             <div class="tile wide">
-                                <div class="tile-content"></div>
+                                <a href="#tile-row" class="tile-content">
+                                    <span class="tile-title">.tile-row</span>
+                                </a>
                             </div>
                             <div class="tile wide">
-                                <div class="tile-content"></div>
+                                <a href="#tile" class="tile-content">
+                                    <span class="tile-title">.tile</span>
+                                </a>
                             </div>
                             <div class="tile wide">
-                                <div class="tile-content"></div>
+                                <a href="#nesting" class="tile-content">
+                                    <span class="tile-title">nesting</span>
+                                </a>
                             </div>
                             <div class="tile wide">
-                                <div class="tile-content"></div>
+                                <a href="#transform" class="tile-content">
+                                    <span class="tile-title">responsive</span>
+                                </a>
                             </div>
                             <div class="tile wide">
-                                <div class="tile-content"></div>
+                                <a href="#utilities" class="tile-content">
+                                    <span class="tile-title">utilities</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <h2>Examples</h2>
+                        <div class="tile-row tiles4 tiles6-tablet tiles4-phone">
+                            <div class="tile wide">
+                                <a href="#basic" class="tile-content">
+                                    <span class="tile-title">basic</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <h2>Design</h2>
+                        <div class="tile-row tiles4 tiles6-tablet tiles4-phone">
+                            <div class="tile wide">
+                                <a href="#styling" class="tile-content">
+                                    <span class="tile-title">styling</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <h1>Scaffolding</h1>
+                <h1 class="section-header">Scaffolding</h1>
                 <section id="tile-row" class="howto-section">
                     <h1>Tile-row</h1>
                     <p>A <code>.tile-row</code> is the base of the whole system, it is inside of these that you put your tiles. The row provides the structure that is used when deciding the size of a tile. The default system supports upp to <code>.tiles12</code>, but this can be increased if needed.</p>
@@ -136,7 +165,7 @@
                 <p>This example create a double tile that fills its container, we then add a tile row that can display two horizontal and two vertical tiles, we only add two tiles meaning that there will be a gap, one tile in height below the two inner most tiles. The <code>.collapse</code> simply removes this gap, making the double tile in this example appear as a wide tile.</p>
                 </section>
 
-                <h1>Examples</h1>
+                <h1 class="section-header">Examples</h1>
                 <section id="basic" class="howto-section">
                     <h1>Basic usage</h1>
                     <p>A simple use case for tily is to insert tiles in an arbitrary container and have them look a certain way independant of the 
@@ -194,6 +223,12 @@
                         </div>
                     </div>
                 </section>
+                <h1 class="section-header">Design</h1>
+                <section id="styling" class="howto-section">
+                    <h1>Styling</h1>
+                    <p>Sorry but Tily currently ships with absolutely no styling whatsoever. The reason for this is the myraid of design choices that one can pick when building a layout with tiles.</p>
+                    <p>The simple tip is to target the <code>.tile-content</code> class and set a background on it and then simply add content to it.</p>
+                </section
             </div>
         </div>
     </div>

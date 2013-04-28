@@ -29,3 +29,41 @@
 		width: 40%;
 	}
 }
+
+a.tile-content {
+	&:hover {
+		background-color: darken(@color-accent,10);
+	}
+}
+
+.tile .tile-title {
+	position: absolute;
+	top: 50%;
+	margin-top: -0.25em;
+	width: 100%;
+	left: 1em;
+	padding: 0;
+	text-decoration: none;
+}
+
+h1.section-header {
+	font-size: 3em;
+}
+
+@media (min-width: 1200px){
+	.container {
+		width: 940px;
+	}
+}
+
+@media (max-width: 767px) {  
+	.container {
+		width: auto;
+		margin: 0 10px;
+		padding: 10px;
+	}
+
+	.row .half {
+		width: 100%;
+	}
+}
