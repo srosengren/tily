@@ -60,6 +60,7 @@ small {
 	background-position: center center;
 
 	.news-text {
+		display:blocK;
 		padding: 1em;
 		font-size: 1.2em;
 		line-height: 1.2em;
@@ -80,6 +81,9 @@ small {
 		font-size: 1.5em;
 		margin-top: 2.25em;
 		display: block;
+		position: absolute;
+		top: 50%;
+		margin-top: -0.25em;
 	}
 
 	.news-meta {
@@ -112,11 +116,6 @@ small {
 	display:block;
 	margin: 0 2em;
 	text-align: right;
-}
-
-.news .quote .tile-content .news-meta .tile-title {
-	padding-left: 1.5em;
-	background-color: #339933;
 }
 
 .news .tile-icon {
@@ -162,11 +161,43 @@ small {
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {  
+	body {
+		font-size: 12px;
+	}
 	.container {
 		width: 724px;
+	}	
+	.news .tile-content .news-text {
+		padding: 0.4em;
 	}
-	.hero {
-		font-size: 11px;
+	.news .tile-content .news-meta .attribution {
+		font-size: 0.8em;
+	}
+	.news .tile-content .news-meta .tile-title {
+		padding: 0.2em 0.5em;
+	}
+	.social {
+		font-size: 14px;
+	}
+	.news .tile-content .news-weather-info {
+		font-size: 1.3em;
+	}
+	//override font-size
+	.tile-row {
+		margin-left: -10px;
+	}
+	.tile-row > .tile.wide, .tile-row > .tile.double {
+		padding-right: 10px;
+	}
+	.tile-row > .tile {
+		border-left: 10px solid transparent;
+	}
+	.tile-row > .tile > .tile-content {
+		margin-top: -10px;
+		padding-top: 10px;
+	}
+	.tile-row .tile.double > .tile-row, .tile-row .tile.wide > .tile-row {
+		margin-right: -10px;
 	}
 }
  
@@ -191,6 +222,9 @@ small {
 	.hero .hero-text {
 		line-height: 1.3em;
 		width: 70%;
+	}
+	.news .tile-content .news-meta .attribution {
+		font-size: 0.8em;
 	}
 }
  
