@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		    var msViewportStyle = document.createElement("style");
+		    msViewportStyle.appendChild(
+		        document.createTextNode(
+		            "@-ms-viewport{width:auto!important}"
+		        )
+		    );
+		    document.getElementsByTagName("head")[0].
+		        appendChild(msViewportStyle);
+		}
+	</script>
 	<title>Tily - A flexible tile framework</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
