@@ -31,11 +31,10 @@
 .tile-row .tile .tile-content {
   position: absolute;
   top: 0px;
+  right: 0px;
   left: 0px;
   display: block;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
 }
 .tile-row > .tile.collapse {
   padding-bottom: 0 !IMPORTANT;
@@ -53,8 +52,7 @@
   padding-right: 12px;
 }
 .tile-row > .tile > .tile-content {
-  margin-top: -12px;
-  padding-top: 12px;
+  bottom: 12px;
 }
 .tile-row .tile.double > .tile-row,
 .tile-row .tile.wide > .tile-row {
@@ -204,8 +202,7 @@
     padding-right: 10px;
   }
   .tile-row > .tile > .tile-content {
-    margin-top: -10px;
-    padding-top: 10px;
+    bottom: 10px;
   }
   .tile-row .tile.double > .tile-row,
   .tile-row .tile.wide > .tile-row {
@@ -404,8 +401,7 @@
     padding-right: 8px;
   }
   .tile-row > .tile > .tile-content {
-    margin-top: -8px;
-    padding-top: 8px;
+    bottom: 8px;
   }
   .tile-row .tile.double > .tile-row,
   .tile-row .tile.wide > .tile-row {
