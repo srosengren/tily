@@ -1,10 +1,12 @@
-//V1.0.2
 /*
- * MIXIN - Used for generating the tiles
+ * Tily v1.0.3
+ *
+ * Copyright 2013 Sebastian Rosengren
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
  */
-/*
- * BASE STYLING
- */
+
 .tile-row,
 .tile.collapse {
   *zoom: 1;
